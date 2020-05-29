@@ -35,4 +35,7 @@ Route::get('admin/posts/example', array('as' => 'admin.home' , function () {
     return "this url is $url";
 }));
 
-Route::get('/post/{id}', 'PostsController@index');
+// Route::get('/post/{id}', 'PostsController@index');
+
+// Creates Routes for each CRUD function.
+Route::resource('posts', 'PostsController');
